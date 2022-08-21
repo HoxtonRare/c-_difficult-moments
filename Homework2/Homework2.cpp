@@ -37,7 +37,7 @@ void sortGls(ifstream& book)
 		}
 		else
 		{
-			cout << "Ошибка";
+			cout << "Ошибка чтения файла";
 		}
 		book1.close();
 		ifstream book2("voina-i-mir.txt");
@@ -59,7 +59,7 @@ void sortGls(ifstream& book)
 		}
 		else
 		{
-			cout << "Ошибка";
+			cout << "Ошибка чтения файла";
 		}
 		book2.close();
 		ifstream book3("voina-i-mir.txt");
@@ -83,7 +83,7 @@ void sortGls(ifstream& book)
 		}
 		else
 		{
-			cout << "Ошибка";
+			cout << "Ошибка чтения файла";
 		}
 		book3.close();
 		ifstream book4("voina-i-mir.txt");
@@ -110,7 +110,7 @@ void sortGls(ifstream& book)
 		}
 		else
 		{
-			cout << "Ошибка";
+			cout << "Ошибка чтения файла";
 		}
 		book4.close();
 }
@@ -119,7 +119,7 @@ int main()
 {
 	//task1
 	setlocale(LC_ALL, "Rus");
-	/*int a = 10;
+	int a = 10;
 	int b = 15;
 	int* aPtr = &a;
 	int* bPtr = &b;
@@ -156,7 +156,7 @@ int main()
 	{
 		cout << *i << " ";
 	}
-	cout << endl;*/
+	cout << endl;
 
 	//task3
 	ifstream book("voina-i-mir.txt");
