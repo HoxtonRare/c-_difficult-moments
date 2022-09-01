@@ -10,8 +10,8 @@ using namespace std;
 template <class Container, class T>
 void insert_sorted(Container& v, const T& value)
 {
-	typename Container::iterator iter = upper_bound(begin(v), end(v), value);
-	v.insert(iter, value);
+	typename Container::iterator it = upper_bound(begin(v), end(v), value);
+	v.insert(it, value);
 }
 
 int main()
