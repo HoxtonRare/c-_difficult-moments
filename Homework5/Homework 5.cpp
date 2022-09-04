@@ -44,13 +44,13 @@ int main()
 	multimap<size_t, string> split;
 	for (auto iter = text.begin(); iter != text.end(); iter++)
 	{
-		auto sign = find_first_of(iter, text.end(), separators.begin(), separators.end());
-		if (sign != text.end())
+		auto sent = find_first_of(iter, text.end(), separators.begin(), separators.end());
+		if (sent != text.end())
 		{
 			auto sentBegin = distance(text.begin(), iter);
-			auto sentEnd = distance(text.begin(), sign);
+			auto sentEnd = distance(text.begin(), sent);
 			temp = text.substr(sentBegin, sentEnd - sentBegin + 1);
-			iter = sign;
+			iter = sent;
 			if (temp[0] == ' ')
 			{
 				temp = temp.substr(1);
