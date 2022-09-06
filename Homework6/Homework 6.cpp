@@ -2,7 +2,6 @@
 #include <sstream>
 #include <mutex>
 #include <vector>
-#include <chrono>
 #include <random>
 
 using namespace std;
@@ -87,13 +86,10 @@ mutex mutexHouse;
 
 void master(vector<int>& things)
 {
-	const static auto seed = chrono::system_clock::now().time_since_epoch().count();
-	static mt19937_64 generator(seed);
-	uniform_int_distribution<int32_t> dis(1, 100);
 	while (!things.empty())
 	{
 		mutexHouse.lock();
-		int new_thing = dis(generator);
+		int new_thing = rand() % 100;
 		things.push_back(new_thing);
 		cout << "Хозяин принёс вещь стоимостью " << new_thing << endl;
 		cout << "Стоимость вещей в доме: " << endl;
